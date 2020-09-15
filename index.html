@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+    <title>🍏Andy's Fruit</title>
+    <meta name="description" content="This webpage is about apples and pears">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- This is the css reference file -->
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="stylesheet" href="sass-styles.css" type="text/css">
+    <script src="js/scripts.js"></script>
+    <script src="js/utils.js"></script>
+</head>
+
+<body>
+    <section class="main-container">
+        <header>
+            <div class="logo-container">
+                <a href="https://en.wikipedia.org/wiki/Apple">
+                    <picture>
+                        <source media="(min-width: 1000px)" srcset="./apple-1024px.jpg">
+                        <img style="max-height: 100px" src="apple-640px.jpg" alt="Apple" title="A nice apple">
+                    </picture>
+                </a>
+            </div>
+            <div class="search-container"><input type="search" placeholder="Search our website..."/></div>
+        </header>
+        <nav id="navigation">
+            <ul>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+                <li><a href="recipies.html">Recipies</a></li>
+                <li><a href="about.html">About us</a></li>
+            </ul>
+        </nav>
+        <article id="main-content-container">
+            <div id="main-content">
+                <div id="message">
+
+                </div>
+                <h1>Andy's Fruit</h1>
+                <img style="max-height: 100px" src="apple-640px.jpg" alt="Apple" title="A nice apple"><p><span style="color: red">Welcome</span> to Andy's fruit shop. There are some
+                    <strong>nice apples</strong> here which you can buy for a <em>very&nbsp;good</em>
+                    price.</p>
+                <h2 id="apples">Apples</h2>
+                <p>Apples are round, sour and juicy.</p>
+                <div id="icons-container">
+                    <div class="icon-card"><span>Tasty Watermelons</span></div>
+                    <div class="icon-card"><span>Always fresh<br>oranges</span></div>
+                    <div class="icon-card"><span>The best strawberrys</span></div>
+                </div>
+            </div>
+            <aside>
+                <b>Opening hours</b>
+                <ul>
+                    <li>Mon-fri: 8am-5pm</li> 
+                    <li>Sat: 9am-5pm</li>
+                    <li>Sun: Closed</li>
+                </ul>
+                <b>Location</b><br>
+                <a href="#">Find us on google maps</a><br>
+                <b>Telephone</b><br>
+                <a href="tel:1-562-867-5309">Give us a call</a><br>
+                <b>Email</b><br>
+                <a href="mailto:oskar.lind@gmail.com">Send us an email</a>
+            </aside>
+        </article>
+        <article>
+            <h2 id="pears">Pears</h2>
+            <p>Pears have a <em>weird</em> shape but are nice nonetheless.</p>
+        </article>
+        <article>
+            <h2>Recipes</h2>
+            <div id="recipe1">Apple Pie</div>
+            <div id="recipe2" style="display: none;">Blueberry cake</div>
+            <div id="recipe3" style="display: none;">Strawberry smoothie</div>
+            <button id="prev" onclick="prevRecipe()">Previous</button>
+            <button id="next" onclick="nextRecipe()">Next</button>
+        </article>
+        <article>
+            <h3>Recent harvest</h3>
+            <p>We have a nice new batch of apples ready.</p>
+            <a title="Read more about apples!" target="_blank" href="https://en.wikipedia.org/wiki/Apple">Read more about apples here</a>
+        </article>
+        <footer class="footer-container">
+            <div class="footer-box">&copy; Oskar Lind 2020</div>
+            <div class="footer-box">Location: <br>Kungsgatan 1<br>11145 Stockholm</div>
+            <div class="footer-box">Please follow us on Facebook, Twitter and Instagram</div>
+        </footer>
+    </section>
+    <script type="text/javascript">
+        let alertMessage = (message) => {
+            alert(message);
+        }
+
+        let multiplyIngredient = (original, factor) => {
+            let result;
+            if(original > 0) {
+                result = original * factor;
+            } else {
+                result = original;
+            }
+            alertMessage("Some went wrong, please try again.");
+            return result;
+        }
+
+    </script>
+</body>
+
+</html>

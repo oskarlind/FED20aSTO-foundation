@@ -1,0 +1,39 @@
+/* Headings */
+$primary-font-size: 3rem;
+
+h1 {
+    font-size: $primary-font-size;
+}
+
+h2 {
+    font-size: $primary-font-size * 0.7;
+}
+
+h3 {
+    font-size: $primary-font-size * 0.3;
+}
+
+/* Messages */
+#message-top {
+    min-height: 100px;
+    border: 5px solid var(--primary-light-color);
+    &.alert {
+        background-color: red;
+    }
+    &.success {
+        background-color: green;
+    }
+}
+
+/* Navigation */
+nav {
+    li {
+        display: inline-block;
+    }
+    ul {
+        padding: 0;
+    }
+    a {
+        padding: 15px;
+    }
+}
