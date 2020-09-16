@@ -1,0 +1,15 @@
+$mobile_maxwidth: 600px;
+$tablet_maxwidth: 1024px;
+$desktop_minwidth: 1024px;
+
+@mixin breakpoint($device, $minmax) {
+    @if $minmax == min {
+        @media screen and (min-width: $device) {
+            @content;
+        }
+    } @else if $minmax == max {
+        @media screen and (max-width: $device) {
+            @content;
+        }
+    }
+}

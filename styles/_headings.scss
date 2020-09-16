@@ -1,0 +1,13 @@
+@use 'fonts';
+
+h1 {
+    font-size: fonts.$primary-font-size;
+}
+
+h2 {
+    font-size: fonts.$primary-font-size * 0.7;
+}
+
+h3 {
+    font-size: fonts.$primary-font-size * 0.3;
+}

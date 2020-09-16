@@ -1,0 +1,31 @@
+@use 'reset';
+@use 'navigation';
+@use 'basics';
+
+@include reset.basic-reset;
+
+/* Messages */
+#message-top {
+    min-height: 100px;
+    border: 5px solid var(--primary-light-color);
+    &.alert {
+        background-color: red;
+    }
+    &.success {
+        background-color: green;
+    }
+}
+
+.store-closed-background {
+    background-color: black;
+}
+
+.message-bottom {
+    border: 3px solid green;
+    padding: 10px;
+
+    &.store-closed {
+        @extend .store-closed-background;
+        color: #fff;
+    }
+}

@@ -5,9 +5,6 @@
     --primary-light-color: #f6f4e5;
     --maybe-use-this-later-color: #da8c48;
     --alert-color: #b55750;
-
-    --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    --font-size: 1.1rem;
 }
 html {
     font-family: var(--font-family);
@@ -124,14 +121,6 @@ nav a:hover {
     background-color: var(--secondary-color);
 }
 @media screen and (max-width: 600px) {
-    nav li {
-        display: block;
-        padding: 20px 0;
-        border-bottom: 1px solid var(--primary-light-color);
-    }
-    nav li:last-child {
-        border-bottom: none;
-    }
     .logo-container {
         display: none;
     }

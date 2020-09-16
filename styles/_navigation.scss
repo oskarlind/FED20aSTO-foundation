@@ -1,0 +1,25 @@
+/* Navigation */
+@use 'responsive';
+
+nav {
+    li {
+        display: inline-block;
+    }
+    ul {
+        padding: 0;
+    }
+    a {
+        padding: 15px;
+    }
+}
+
+@include responsive.breakpoint(responsive.$mobile_maxwidth, max) {
+    nav li {
+        display: block;
+        padding: 20px 0;
+        border-bottom: 1px solid var(--primary-light-color);
+    }
+    nav li:last-child {
+        border-bottom: none;
+    }
+}
