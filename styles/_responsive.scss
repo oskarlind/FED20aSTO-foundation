@@ -1,14 +1,21 @@
-$mobile_maxwidth: 600px;
-$tablet_maxwidth: 1024px;
-$desktop_minwidth: 1024px;
+@use 'sass:map';
 
-@mixin breakpoint($device, $minmax) {
+$breakpoints: (
+    "small": 480px,
+    "medium": 1024px,
+    "large": 1680px
+);
+
+@mixin breakpoint($screenSize, $minmax) {
+    @if $minmax != min and $minmax != max {
+        @error "Media query must use either min or max value for calculating breakpoint!";
+    }
     @if $minmax == min {
-        @media screen and (min-width: $device) {
+        @media screen and (min-width: map.get($breakpoints, $screenSize)) {
             @content;
         }
     } @else if $minmax == max {
-        @media screen and (max-width: $device) {
+        @media screen and (max-width: map.get($breakpoints, $screenSize)) {
             @content;
         }
     }

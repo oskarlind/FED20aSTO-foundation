@@ -1,0 +1,50 @@
+/* Layout */
+.main-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 85rem;
+    display: grid;
+    grid-row-gap: 10px;
+}
+#main-content-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+header,
+footer,
+nav,
+article {
+    padding: 15px;
+    background-color: #fff;
+}
+aside {
+    background-color: var(--secondary-color);
+    padding: 15px;
+}
+
+
+/* Header */
+header {
+    height: 200px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background: url("../img/apples-bg.jpg") 0 0 no-repeat;
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+}
+
+/* Footer */
+.footer-container {
+    display: flex;
+}
+.footer-box {
+    flex: 1;
+}
+
+@media screen and (min-width: 600px) {
+    header {
+        grid-template-columns: 1fr 2fr;
+    }
+}

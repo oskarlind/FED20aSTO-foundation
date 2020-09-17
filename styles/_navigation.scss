@@ -1,5 +1,6 @@
 /* Navigation */
 @use 'responsive';
+@use 'colors';
 
 nav {
     li {
@@ -13,11 +14,21 @@ nav {
     }
 }
 
-@include responsive.breakpoint(responsive.$mobile_maxwidth, max) {
+nav a:hover {
+    text-decoration: none;
+    background-color: white;
+}
+#navigation {
+    background-color: var(--secondary-color);
+}
+
+@include responsive.breakpoint("medium", max) {
+    //@debug responsive.$mobile_maxwidth;
+    @debug "Primary color: #{colors.$primary-light-color}";
     nav li {
         display: block;
         padding: 20px 0;
-        border-bottom: 1px solid var(--primary-light-color);
+        border-bottom: 1px solid #{colors.$primary-light-color};
     }
     nav li:last-child {
         border-bottom: none;

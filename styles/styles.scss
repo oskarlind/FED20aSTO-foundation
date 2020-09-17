@@ -1,5 +1,9 @@
 @use 'reset';
 @use 'navigation';
+@use 'forms';
+@use 'layout';
+@use 'icons';
+@use 'links';
 @use 'basics';
 
 @include reset.basic-reset;
