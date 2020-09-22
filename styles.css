@@ -1,35 +1,3 @@
 /* General styling */
-:root {
-    --primary-color: #1a8e75;
-    --secondary-color: #67cbc1;
-    --primary-light-color: #f6f4e5;
-    --maybe-use-this-later-color: #da8c48;
-    --alert-color: #b55750;
-}
-html {
-    font-family: var(--font-family);
-    font-size: var(--font-size);
-}
-body {
-    background-color: var(--primary-color);
-    margin: 0;
-}
 
-@media screen and (max-width: 600px) {
-    .logo-container {
-        display: none;
-    }
-    header {
-        grid-template-columns: 1fr;
-    }
-    #icons-container {
-        flex-direction: column;
-    }
-    .icon-card {
-        margin-top: 20px;
-    }
-    #main-content-container {
-        grid-template-columns: none; /* Move sidebar below main content area */
-    }
-}
 

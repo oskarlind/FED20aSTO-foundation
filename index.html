@@ -27,7 +27,14 @@
             <div class="search-container"><input type="search" placeholder="Search our website..."/></div>
         </header>
         <nav id="navigation">
-            <ul>
+            <button class="menu-button" onclick="toggleMenu()" aria-label="Main Menu">
+                <svg viewBox="0 0 100 80" width="40" height="40">
+                    <rect width="100" height="20"></rect>
+                    <rect y="30" width="100" height="20"></rect>
+                    <rect y="60" width="100" height="20"></rect>
+                </svg>
+            </button>
+            <ul class="menu">
                 <li><a class="active" href="index.html">Home</a></li>
                 <li><a href="contact.html">Contact us</a></li>
                 <li><a href="recipies.html">Recipies</a></li>

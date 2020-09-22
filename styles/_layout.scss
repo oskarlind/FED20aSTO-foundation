@@ -1,3 +1,6 @@
+@use 'colors';
+@use 'fonts';
+
 /* Layout */
 .main-container {
     margin-left: auto;
@@ -19,20 +22,36 @@ article {
     background-color: #fff;
 }
 aside {
-    background-color: var(--secondary-color);
+    background-color: colors.$secondary-color;
     padding: 15px;
 }
 
+body {
+    background-color: colors.$primary-color;
+    margin: 0;
+}
+
+html {
+    font-family: fonts.$font-family;
+    font-size: fonts.$font-size;
+}
 
 /* Header */
 header {
     height: 200px;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+    display: flex;
     background: url("../img/apples-bg.jpg") 0 0 no-repeat;
     background-attachment: fixed;
     background-position: top;
     background-size: cover;
+
+    .logo-container {
+        flex: 1;
+    }
+
+    .search-container {
+        flex: 2;
+    }
 }
 
 /* Footer */
@@ -41,10 +60,4 @@ header {
 }
 .footer-box {
     flex: 1;
-}
-
-@media screen and (min-width: 600px) {
-    header {
-        grid-template-columns: 1fr 2fr;
-    }
 }

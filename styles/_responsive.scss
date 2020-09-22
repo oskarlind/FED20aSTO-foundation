@@ -20,3 +20,22 @@ $breakpoints: (
         }
     }
 }
+
+
+@media screen and (max-width: 600px) {
+    .logo-container {
+        display: none;
+    }
+    header {
+        grid-template-columns: 1fr;
+    }
+    #icons-container {
+        flex-direction: column;
+    }
+    .icon-card {
+        margin-top: 20px;
+    }
+    #main-content-container {
+        grid-template-columns: none; /* Move sidebar below main content area */
+    }
+}
