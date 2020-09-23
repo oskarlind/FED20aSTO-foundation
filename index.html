@@ -24,7 +24,7 @@
                     </picture>
                 </a>
             </div>
-            <div class="search-container"><input type="search" placeholder="Search our website..."/></div>
+            <div class="search-container"><label for="searchForm">Search</label><input name="searchForm" id="searchForm" type="search" placeholder="Search our website..."/></div>
         </header>
         <nav id="navigation">
             <button class="menu-button" onclick="toggleMenu()" aria-label="Main Menu">
@@ -42,21 +42,23 @@
             </ul>
         </nav>
         <article id="main-content-container">
+            <div id="left-sidebar">
+                <h2>Newsletter</h2>
+                <span>Sign up for our newsletter</span>
+                <label for="newsletter">Newsletter signup</label>
+                <input id="newsletter" name="newsletter" type="text"/>
+                <button type="submit">Send</button>
+            </div>
             <div id="main-content">
                 <div id="message">
 
                 </div>
                 <h1>Andy's Fruit</h1>
-                <img style="max-height: 100px" src="apple-640px.jpg" alt="Apple" title="A nice apple"><p><span style="color: red">Welcome</span> to Andy's fruit shop. There are some
+                <img style="max-height: 100px" src="apple-640px.jpg" alt="Apple" title="A nice apple"><p><span style="color: darkblue">Welcome</span> to Andy's fruit shop. There are some
                     <strong>nice apples</strong> here which you can buy for a <em>very&nbsp;good</em>
                     price.</p>
                 <h2 id="apples">Apples</h2>
                 <p>Apples are round, sour and juicy.</p>
-                <div id="icons-container">
-                    <div class="icon-card"><span>Tasty Watermelons</span></div>
-                    <div class="icon-card"><span>Always fresh<br>oranges</span></div>
-                    <div class="icon-card"><span>The best strawberrys</span></div>
-                </div>
             </div>
             <aside>
                 <b>Opening hours</b>
@@ -72,6 +74,11 @@
                 <b>Email</b><br>
                 <a href="mailto:oskar.lind@gmail.com">Send us an email</a>
             </aside>
+            <div id="icons-container">
+                <div class="icon-card"><span>Tasty Watermelons</span></div>
+                <div class="icon-card"><span>Always fresh<br>oranges</span></div>
+                <div class="icon-card"><span>The best strawberrys</span></div>
+            </div>
         </article>
         <article>
             <h2 id="pears">Pears</h2>

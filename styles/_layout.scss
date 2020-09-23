@@ -1,5 +1,6 @@
 @use 'colors';
 @use 'fonts';
+@use 'responsive';
 
 /* Layout */
 .main-container {
@@ -12,7 +13,25 @@
 }
 #main-content-container {
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+    "left middle right"
+    "icons icons icons"
+}
+@include responsive.breakpoint("small", max) {
+    #main-content-container {
+        grid-template-areas:
+    "middle"
+    "left"
+    "right"
+    "icons"
+    }
+}
+.main-content {
+    grid-area: middle;
+}
+.left-sidebar {
+    grid-area: left;
 }
 header,
 footer,
@@ -22,6 +41,7 @@ article {
     background-color: #fff;
 }
 aside {
+    grid-area: right;
     background-color: colors.$secondary-color;
     padding: 15px;
 }
