@@ -5,6 +5,8 @@
 @use 'icons';
 @use 'links';
 @use 'basics';
+@use 'colors';
+@use "sass:map";
 
 @include reset.basic-reset;
 
@@ -33,3 +35,31 @@
         color: #fff;
     }
 }
+
+.tabNav {
+
+    $tabWidth: 600px;
+    $tabHeight: 300px;
+
+    height: $tabHeight;
+    width: $tabWidth;
+    
+    ul.tabLinks {
+        height: 50px;
+        border: 1px solid colors.$secondary-color;
+        li {
+            float: left;
+            width: 200px;
+        }
+    }
+
+    article {
+        position: absolute;
+        width: $tabWidth;
+        height: 500px;
+        &.active-tab {
+            z-index: 1;
+        }
+    }
+}
+

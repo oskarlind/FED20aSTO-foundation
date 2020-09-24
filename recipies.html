@@ -3,7 +3,7 @@
 <html lang="en-us">
 
 <head>
-    <title>🍏Andy's Fruit</title>
+    <title>Recept med äpplen</title>
     <meta name="description" content="This webpage is about apples and pears">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- This is the css reference file -->
@@ -28,7 +28,7 @@
                     </picture>
                 </a>
             </div>
-            <div class="search-container"><input type="search" placeholder="Search our website..."/></div>
+            <div class="search-container"><input type="search" placeholder="Search our website..." /></div>
         </header>
         <nav id="navigation">
             <ul>
@@ -40,7 +40,32 @@
         </nav>
         <article id="main-content-container">
             <div id="main-content">
-                <h1>Recipes</h1>
+                <h1>Recept med äpplen</h1>
+                <p>Här hittar du recept med äpple, t.ex. äppelpaj.</p>
+                <div class="tabNav">
+                    <div>
+                        <ul class="tabLinks">
+                            <li><a href="#" class="active">Ingredients</a></li>
+                            <li><a href="#">Instructions</a></li>
+                        </ul>
+                        <article class="active-tab">
+                            <h2>Ingredients</h2>
+                            <ul>
+                                <li>Butter</li>
+                                <li>Flour</li>
+                                <li>Salt</li>
+                            </ul>
+                        </article>
+                        <article>
+                            <h2>Instructions</h2>
+                            <p>Make the pie!</p>
+                        </article>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    registerTabs();
+                </script>
+
                 <h2>Available recipes</h2>
                 <div id="availableRecipes"></div>
                 <script type="text/javascript">
@@ -62,18 +87,18 @@
                         <td id="butter"></td>
                         <td>grams</td>
                     </tr>
-            </table>
-            <script type="text/javascript">
-                let multiplier = 2;
-                document.getElementById("apples").innerHTML = calculateQuantity(10, multiplier);
-                document.getElementById("flour").innerHTML = calculateQuantity(400, multiplier);
-                document.getElementById("butter").innerHTML = calculateQuantity(200, multiplier);
-            </script>
+                </table>
+                <script type="text/javascript">
+                    let multiplier = 2;
+                    document.getElementById("apples").innerHTML = calculateQuantity(10, multiplier);
+                    document.getElementById("flour").innerHTML = calculateQuantity(400, multiplier);
+                    document.getElementById("butter").innerHTML = calculateQuantity(200, multiplier);
+                </script>
             </div>
             <aside>
                 <b>Opening hours</b>
                 <ul>
-                    <li>Mon-fri: 8am-5pm</li> 
+                    <li>Mon-fri: 8am-5pm</li>
                     <li>Sat: 9am-5pm</li>
                     <li>Sun: Closed</li>
                 </ul>
@@ -100,7 +125,8 @@
         <article>
             <h3>Recent harvest</h3>
             <p>We have a nice new batch of apples ready.</p>
-            <a title="Read more about apples!" target="_blank" href="https://en.wikipedia.org/wiki/Apple">Read more about apples here</a>
+            <a title="Read more about apples!" target="_blank" href="https://en.wikipedia.org/wiki/Apple">Read more
+                about apples here</a>
         </article>
         <footer class="footer-container">
             <div class="footer-box">&copy; Oskar Lind 2020</div>

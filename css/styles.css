@@ -296,4 +296,25 @@ h3 {
   color: #fff;
 }
 
+.tabNav {
+  height: 300px;
+  width: 600px;
+}
+.tabNav ul.tabLinks {
+  height: 50px;
+  border: 1px solid #67cbc1;
+}
+.tabNav ul.tabLinks li {
+  float: left;
+  width: 200px;
+}
+.tabNav article {
+  position: absolute;
+  width: 600px;
+  height: 500px;
+}
+.tabNav article.active-tab {
+  z-index: 1;
+}
+
 /*# sourceMappingURL=styles.css.map */
