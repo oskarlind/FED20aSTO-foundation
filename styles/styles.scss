@@ -1,65 +1,14 @@
-@use 'reset';
-@use 'navigation';
-@use 'forms';
-@use 'layout';
-@use 'icons';
-@use 'links';
-@use 'basics';
 @use 'colors';
-@use "sass:map";
+@use 'fonts';
 
-@include reset.basic-reset;
-
-/* Messages */
-#message-top {
-    min-height: 100px;
-    border: 5px solid var(--primary-light-color);
-    &.alert {
-        background-color: red;
-    }
-    &.success {
-        background-color: green;
-    }
+body {
+    background-color: colors.$secondary-color;
 }
 
-.store-closed-background {
-    background-color: black;
+.container {
+    background-color: colors.$primary-light-color;
 }
 
-.message-bottom {
-    border: 3px solid green;
-    padding: 10px;
-
-    &.store-closed {
-        @extend .store-closed-background;
-        color: #fff;
-    }
+.col {
+    border: 1px solid colors.$primary-color;
 }
-
-.tabNav {
-
-    $tabWidth: 600px;
-    $tabHeight: 300px;
-
-    height: $tabHeight;
-    width: $tabWidth;
-    
-    ul.tabLinks {
-        height: 50px;
-        border: 1px solid colors.$secondary-color;
-        li {
-            float: left;
-            width: 200px;
-        }
-    }
-
-    article {
-        position: absolute;
-        width: $tabWidth;
-        height: 500px;
-        &.active-tab {
-            z-index: 1;
-        }
-    }
-}
-
